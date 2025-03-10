@@ -112,8 +112,8 @@ This lesson covers the essential concepts of mutex and lock management in C++. T
 | Test                                                                  | Lock Type (鎖類型)              | Performance (效能) |
 |-----------------------------------------------------------------------|---------------------------------|--------------------|
 | Coarse-grained Compute-bound / 粗粒度 (全局鎖) 計算密集                  | Global mutex / 全局鎖           | 0.246971 sec       |
-| Coarse-grained I/O-bound / 粗粒度 (全局鎖) I/O密集                        | Global mutex / 全局鎖           | 1.343854 sec       |
 | Fine-grained Compute-bound / 細粒度 (每個元素鎖) 計算密集                  | Per-element mutex / 每個元素鎖  | 0.012905 sec       |
+| Coarse-grained I/O-bound / 粗粒度 (全局鎖) I/O密集                        | Global mutex / 全局鎖           | 1.343854 sec       |
 | Fine-grained I/O-bound / 細粒度 (每個元素鎖) I/O密集                        | Per-element mutex / 每個元素鎖  | 0.163759 sec       |
 
 ---
