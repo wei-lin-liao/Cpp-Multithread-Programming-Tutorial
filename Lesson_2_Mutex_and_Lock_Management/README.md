@@ -8,9 +8,9 @@ This lesson covers the essential concepts of mutex and lock management in C++. T
 ## Template-based Lock Performance Testing
 
 **目的 / Purpose:**  
-- • Demonstrate a generic function template that tests lock performance using various mutex types.  
+- Demonstrate a generic function template that tests lock performance using various mutex types.  
   展示如何利用模板函式測試不同互斥鎖型別的效能。  
-- • Use compile-time decision making (`if constexpr` with type traits) to specialize behavior for `std::shared_mutex` versus other mutexes.  
+- Use compile-time decision making (`if constexpr` with type traits) to specialize behavior for `std::shared_mutex` versus other mutexes.  
   利用編譯期決策（`if constexpr` 結合型別萃取）來針對 `std::shared_mutex` 與其他鎖型別實現不同的行為。
 
 **概念 / Concepts:**  
@@ -29,9 +29,9 @@ This lesson covers the essential concepts of mutex and lock management in C++. T
 ## Coarse-grained Lock Test
 
 **目的 / Purpose:**  
-- • Measure the performance of a coarse-grained locking strategy where a single global mutex protects a shared vector.  
+- Measure the performance of a coarse-grained locking strategy where a single global mutex protects a shared vector.  
   測試使用單一全局鎖保護共享向量的粗粒度鎖策略的效能。  
-- • Understand how a global mutex can become a bottleneck when multiple threads contend for the same lock.  
+- Understand how a global mutex can become a bottleneck when multiple threads contend for the same lock.  
   了解當多個執行緒爭奪同一個全局鎖時，該策略如何成為效能瓶頸。
 
 **概念 / Concepts:**  
@@ -47,9 +47,9 @@ This lesson covers the essential concepts of mutex and lock management in C++. T
 ## Fine-grained Lock Test with `std::mutex`
 
 **目的 / Purpose:**  
-- • Test a fine-grained locking strategy where each element in a vector is protected by its own `std::mutex`.  
+- Test a fine-grained locking strategy where each element in a vector is protected by its own `std::mutex`.  
   測試細粒度鎖策略：使用 `std::mutex` 為向量中的每個元素建立獨立鎖。  
-- • Allow multiple threads to concurrently update different elements, thereby reducing lock contention compared to a global lock.  
+- Allow multiple threads to concurrently update different elements, thereby reducing lock contention compared to a global lock.  
   允許多個執行緒同時更新不同元素，相對於全局鎖能大幅降低鎖競爭。
 
 **概念 / Concepts:**  
@@ -65,9 +65,9 @@ This lesson covers the essential concepts of mutex and lock management in C++. T
 ## Performance Comparison and Analysis
 
 **目的 / Purpose:**  
-- • Compare the performance results between coarse-grained and fine-grained locking strategies under various workloads (compute-bound and I/O-bound).  
+- Compare the performance results between coarse-grained and fine-grained locking strategies under various workloads (compute-bound and I/O-bound).  
   比較在不同負載情況下（計算密集與 I/O 密集）粗粒度鎖與細粒度鎖策略的效能表現。  
-- • Analyze trade-offs in terms of simplicity, scalability, and overhead when choosing the appropriate locking mechanism.  
+- Analyze trade-offs in terms of simplicity, scalability, and overhead when choosing the appropriate locking mechanism.  
   分析在選擇鎖策略時，簡單性、擴展性與額外開銷之間的取捨。
 
 **概念 / Concepts:**  
